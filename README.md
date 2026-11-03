@@ -1,8 +1,8 @@
 # 🛒 Optimasi Rute Belanja Kebutuhan Harian Anak Kos
 
 <p align="center">
-  **Mata Kuliah: Matematika Diskrit**  
-  **Kelas: TI-C**
+  *Mata Kuliah: Matematika Diskrit*  
+  *Kelas: TI-C*
 </p>
 
 ---
@@ -34,13 +34,7 @@ Optimasi-Rute-Belanja/
 │
 ├── README.md
 ├── src/
-│   └── main.py
-│
-├── data/
-│   └── lokasi_belanja.csv
-│
-└── docs/
-    └── dokumentasi.md
+    └── main.py
 ```
 
 *Struktur direktori dapat disesuaikan dengan perkembangan proyek.*
@@ -52,8 +46,8 @@ Proyek ini diharapkan menghasilkan simulasi rute belanja yang optimal berdasarka
 ---
 
 <p align="center">
-  **UNIVERSITAS TADULAKO**  
+  *UNIVERSITAS TADULAKO*  
   Program Studi Teknik Informatika  
   Fakultas Teknik  
-  **2026**
+  *2026*
 </p>
