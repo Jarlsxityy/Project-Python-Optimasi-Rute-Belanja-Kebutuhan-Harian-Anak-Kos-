@@ -1,8 +1,8 @@
 # 🛒 Optimasi Rute Belanja Kebutuhan Harian Anak Kos
 
 <p align="center">
-  *Mata Kuliah: Matematika Diskrit*  
-  *Kelas: TI-C*
+**  *Mata Kuliah: Matematika Diskrit*  
+  *Kelas: TI-C***
 </p>
 
 ---
