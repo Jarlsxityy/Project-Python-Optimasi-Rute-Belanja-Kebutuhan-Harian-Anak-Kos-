@@ -17,15 +17,15 @@ Dengan menerapkan konsep teori graf dan algoritma pencarian rute, proyek ini dih
 
 | No. | Nama | NIM |
 |:---:|---|---|
-| 1. | Nama Anggota 1 | NIM |
-| 2. | Nama Anggota 2 | NIM |
-| 3. | Nama Anggota 3 | NIM |
-| 4. | Nama Anggota 4 | NIM |
-| 5. | Nama Anggota 5 | NIM |
-| 6. | Nama Anggota 6 | NIM |
-| 7. | Nama Anggota 7 | NIM |
-| 8. | Nama Anggota 8 | NIM |
-| 9. | Nama Anggota 9 | NIM |
+| 1. | Putri Syafira | F5512620108 |
+| 2. | Willy Andika Mepanti | F5512620111 |
+| 3. | Alif Rizqi Priandono | F5512620107 |
+| 4. | Rava Cello Sampebala | F5512630115 |
+| 5. | Moh. Farras Caesar | F5512630112 |
+| 6. | Muh. Ridha Rizqi Akbar | F5512620100 |
+| 7. | Izzatul Dzaky Lidjo | F5512630114 |
+| 8. | Annisa Nur Rahma | F5512630132 |
+| 9. | A Mach | F5512680001 |
 
 ## 📂 Struktur Proyek
 
