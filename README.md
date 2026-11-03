@@ -33,7 +33,7 @@ Dengan menerapkan konsep teori graf dan algoritma pencarian rute, proyek ini dih
 Optimasi-Rute-Belanja/
 │
 ├── README.md
-├── src/
+└── src/
     └── main.py
 ```
 
