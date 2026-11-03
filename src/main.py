@@ -3,7 +3,7 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 
-# 1. DATA: titik dan matriks jarak (km)
+# 1. data, titik titik dan jarak
 titik = ["Kos", "ATM", "Sembako", "Galon", "Fotokopi", "Laundry"]
 jarak = np.array([
     [0.0, 0.4, 1.9, 1.8, 1.6, 0.4],
@@ -20,7 +20,7 @@ def total(rute): # jarak Kos -> rute -> Kos
     path = [0, *rute, 0]
     return round(sum(jarak[a][b] for a, b in zip(path, path[1:])), 2)
 
-# 2. ALGORITMA
+# 2. algoritma
 bf = min(itertools.permutations(range(1, n)), key=total) 
 
 nn, now = [], 0 
@@ -34,7 +34,7 @@ for judul, r in [("Brute Force", bf), ("Nearest Neighbor", nn), ("Asal-asalan", 
     print(f"{judul:17}: {nama(r)} = {total(r):.1f} km")
 print(f"Penghematan      : {total(asal) - total(bf):.1f} km")
 
-# 3. GRAF BERBOBOT: semua jarak tampil, rute optimal merah
+# 3. graf berbobot
 G = nx.Graph([(titik[i], titik[j], {"weight": jarak[i][j]}) for i in range(n) for j in range(i+1, n)])
 pos = nx.circular_layout(G)
 path = [0, *bf, 0]
@@ -45,7 +45,7 @@ fig, ax = plt.subplots(figsize=(8, 6))
 nx.draw(G, pos, ax=ax, with_labels=True, node_color="lightblue", node_size=2500, edge_color="gray")
 nx.draw_networkx_edges(G, pos, edgelist=merah, edge_color="red", width=3, ax=ax)
 
-# Label manual: posisi konsisten (selalu dihitung dari node berindeks lebih kecil)
+# label manual
 for i in range(n):
     for j in range(i + 1, n):
         t = 0.3 if j - i == 3 else 0.5
