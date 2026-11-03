@@ -16,19 +16,19 @@ jarak = np.array([
 n = len(titik)
 assert np.allclose(jarak, jarak.T), "Matriks jarak harus simetris"
 
-def total(rute):                       # jarak Kos -> rute -> Kos
+def total(rute): # jarak Kos -> rute -> Kos
     path = [0, *rute, 0]
     return round(sum(jarak[a][b] for a, b in zip(path, path[1:])), 2)
 
 # 2. ALGORITMA
-bf = min(itertools.permutations(range(1, n)), key=total)   # Brute Force (5! = 120 rute)
+bf = min(itertools.permutations(range(1, n)), key=total) 
 
-nn, now = [], 0                                            # Nearest Neighbor
+nn, now = [], 0 
 while len(nn) < n - 1:
     now = min(set(range(1, n)) - set(nn), key=lambda j: jarak[now][j])
     nn.append(now)
 
-asal = [titik.index(t) for t in ["Sembako", "Galon", "Laundry", "Fotokopi", "ATM"]]  # pembanding
+asal = [titik.index(t) for t in ["Sembako", "Galon", "Laundry", "Fotokopi", "ATM"]] 
 nama = lambda r: " -> ".join(titik[i] for i in [0, *r, 0])
 for judul, r in [("Brute Force", bf), ("Nearest Neighbor", nn), ("Asal-asalan", asal)]:
     print(f"{judul:17}: {nama(r)} = {total(r):.1f} km")
@@ -48,7 +48,7 @@ nx.draw_networkx_edges(G, pos, edgelist=merah, edge_color="red", width=3, ax=ax)
 # Label manual: posisi konsisten (selalu dihitung dari node berindeks lebih kecil)
 for i in range(n):
     for j in range(i + 1, n):
-        t = 0.3 if j - i == 3 else 0.5          # diagonal lewat pusat digeser agar tidak menumpuk
+        t = 0.3 if j - i == 3 else 0.5
         x, y = (1 - t) * pos[titik[i]] + t * pos[titik[j]]
         aktif = frozenset((titik[i], titik[j])) in merah_set
         ax.text(x, y, f"{jarak[i][j]:.1f}", ha="center", va="center", fontsize=9,
